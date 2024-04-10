@@ -74,11 +74,13 @@ begin
         EN => '1',
         Y => RegSel);
 
+    -- Reg_0 is Hardcoded to 0000
+
     Reg_0 : Reg
     port map(
-        EN => RegSel(0),
+        EN => '0',
         CLK => CLK,
-        CLR => CLR,
+        CLR => '1',
         D => D_Val,
         Q => R0);
 
